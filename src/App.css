@@ -1,38 +1,312 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 6px 12px;
+  font-size: 15px;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 700;
+  color: #fff;
   text-align: center;
+  -webkit-transition: 0.22s ease-in-out;
+  transition: 0.22s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn:hover {
+  -webkit-filter: contrast(140%);
+          filter: contrast(140%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search__domain {
+  display: inline-block;
+  overflow: hidden;
+  padding: 4px;
+  border: 1px solid #cbd3df;
+  background: #fff;
+}
+
+.search__domain input {
+  padding: 3px 6px;
+  border: none;
+  outline: none;
+  font-size: 15px/24px;
+  color: #afaeae;
+}
+
+.search__domain .btn__primary {
+  background: #00c084;
+}
+
+.search__domain .btn__grey {
+  background: #94a0b6;
+  margin-left: 6px;
+}
+
+.registration .btn__reg {
+  color: #1d9ef9;
+}
+
+.registration .btn__blue {
+  background: #1d9ef9;
+}
+
+.nav__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar .nav__item {
+  background: #066bc6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar .nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .nav__link .navmob__logo a {
+  display: none;
+}
+
+.navbar .nav__link a {
+  padding: 16px 17px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-transition: 0.22s ease-in-out;
+  transition: 0.22s ease-in-out;
+}
+
+.navbar .nav__link a:hover {
+  background: #329eff;
+}
+
+.navbar .nav__link .nav__icons {
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navbar .sign__in {
+  display: none;
+}
+
+.bar {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #364364;
+  background: #fff;
+  height: 450px;
+  min-width: 996px;
+}
+
+.bar .bar__icon {
+  border-bottom: 5px solid #069cfa;
+  -webkit-box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.322);
+          box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.322);
+  height: 100%;
+}
+
+.bar .bar__icon .hover__bar {
+  cursor: text;
+}
+
+.bar .bar__icon .hover__bar .hidden {
+  display: none;
+}
+
+.bar .bar__icon .hover__bar:hover .hidden {
+  display: block;
+}
+
+.bar .bar__icon .hover__bar:focus:hover .hidden {
+  display: block;
+}
+
+.bar .bar__icon a {
+  display: block;
+  padding: 15px 17px;
+  font-size: 17px/44px;
+  color: #364364;
+}
+
+.bar .bar__icon a:hover {
+  display: block;
+  background: #f2f4f9;
+}
+
+.bar__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 996px;
+  width: 100%;
+  height: 397px;
+  cursor: pointer;
+}
+
+.domain__item {
+  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  left: 177px;
+  top: 0;
+  background: #f2f4f9;
+  width: 819px;
+  height: 100%;
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.domain__item h1 {
+  font-size: 18px;
+  padding: 4px 0;
+  font-weight: 600;
+}
+
+.domain__item p {
+  font-size: 15px;
+  padding: 5px 0;
+  width: 240px !important;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.domain__item p:hover {
+  text-decoration: underline;
+}
+
+.domain__item .bar__topmargin {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__flex {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .bar {
+    position: absolute;
+    background: #066bc6;
+    height: 450px;
+  }
+  .bar .bar__icon {
+    border-bottom: none;
+    -webkit-box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.322);
+            box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.322);
+    height: 100%;
+  }
+  .bar .bar__icon .hover__bar {
+    cursor: text;
+  }
+  .bar .bar__icon .hover__bar .hidden1 {
+    display: none;
+  }
+  .bar .bar__icon .hover__bar .hidden {
+    display: none;
+  }
+  .bar .bar__icon a {
+    display: block;
+    padding: 15px 24px;
+    color: #fff;
+    font: 700 20px/24px Arial,Helvetica Neue,Helvetica,FreeSans,sans-serif;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #066bc6;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-transition: .22s ease-in-out;
+    transition: .22s ease-in-out;
+  }
+  .bar .bar__icon a:hover {
+    display: block;
+    background: #1d9ef9;
+  }
+  .navbar {
+    width: 100%;
+  }
+  .navbar .nav__item {
+    background: #066bc6;
+  }
+  .navbar .nav__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .nav__link a {
+    display: none;
+  }
+  .navbar .nav__link .sign__in {
+    display: block;
+    padding: 0 17px;
+  }
+  .navbar .nav__link .sign__in a {
+    display: block;
+    padding: 7px 20px;
+    background: #1d9ef9;
+  }
+  .navbar .nav__link .navmob__logo {
+    padding: 12px 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar .nav__link .navmob__logo a {
+    padding: 5px 17px;
+    display: inline-block;
+  }
+  .navbar .nav__link .nav__icons {
+    font-size: 45px;
   }
 }
+/*# sourceMappingURL=App.css.map */
