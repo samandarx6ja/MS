@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const HomeFooter = () => {
   return (
-    <div className="container__max">
+    <div className="container__max home__bannerdispley">
       <div className="home__header">
         <Link to="/">
           <div className="home__headlink">

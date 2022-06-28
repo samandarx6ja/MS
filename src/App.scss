@@ -220,15 +220,14 @@ $bg-blue: #066bc6;
   }
   span {
     font-size: 18px;
-    p{
+    p {
       color: #1d9ef9;
       font-weight: 700;
-    line-height: 27px;
-    &:hover{
-    text-decoration: underline;
-    color: #2286ce;
-
-    }
+      line-height: 27px;
+      &:hover {
+        text-decoration: underline;
+        color: #2286ce;
+      }
     }
   }
 }
@@ -268,12 +267,12 @@ $bg-blue: #066bc6;
   gap: 0.4rem;
   text-align: center;
   text-decoration: none;
-  margin-top: 0.5rem;
   margin: 6px;
+  margin-top: 0.5rem;
 
   .home__banner {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 
     padding: 42px 72px;
     background: #004ea7;
@@ -288,7 +287,7 @@ $bg-blue: #066bc6;
       font-weight: 700;
       letter-spacing: -0.02em;
     }
-    
+
     p {
       white-space: nowrap;
       margin-top: 6px;
@@ -298,23 +297,21 @@ $bg-blue: #066bc6;
       font-weight: 400;
       z-index: 2;
       letter-spacing: -1px;
-    
     }
     span {
       color: #bce1fd;
       p {
         font-weight: 700;
         font-size: 18px;
-        &:hover{
+        &:hover {
           text-decoration: underline;
           color: #3799df;
-      
-          }
+        }
       }
     }
   }
 
-  .banner1::after{
+  .banner1::after {
     position: absolute;
     z-index: 1;
     right: -5.5rem;
@@ -324,7 +321,7 @@ $bg-blue: #066bc6;
     height: 441px;
     background: url('./img//b-banner-carousel__icon_type_bizserver.01681143119114e86e429e7d35ca528b.svg');
   }
-  .banner2::after{
+  .banner2::after {
     position: absolute;
     right: -5.5rem;
     content: '';
@@ -335,31 +332,67 @@ $bg-blue: #066bc6;
   }
 }
 
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1310px){
-  .home__item{
-    .banner1::after{
-      display: none;
-    }
-    .banner2::after{
-      display: none;
-    }
-  }
+.home__slider {
+  display: none;
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1310px) {
+  .home__item {
+    .banner1::after {
+      display: none;
+    }
+    .banner2::after {
+      display: none;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .nav__flex {
+    display: none;
+  }
+  .home__slider {
+    display: block;
+  }
+
+  .home__bannerdispley {
     display: none;
   }
 
@@ -438,6 +471,96 @@ $bg-blue: #066bc6;
 
       .nav__icons {
         font-size: 45px;
+      }
+    }
+  }
+
+  .home__item {
+    text-decoration: none;
+    margin: 0;
+    .banner1::after {
+      display: block;
+    }
+    .banner2::after {
+      display: block;
+    }
+    .home__banner {
+      position: relative;
+      overflow: hidden;
+      height: 446px;
+
+      padding: 42px 72px;
+      background: #004ea7;
+      color: #fff;
+
+      h1 {
+        white-space: nowrap;
+        display: block;
+        margin: auto;
+        font-size: 24px;
+        line-height: 48px;
+        font-weight: 700;
+        letter-spacing: -.01em;
+      }
+
+      p {
+        width: 100%;
+        white-space: wrap;
+        font-size: 15px;
+        line-height: 27px;
+        font-weight: 400;
+        z-index: 2;
+        letter-spacing: -1px;
+      }
+    }
+    .banner1::after {
+      position: absolute;
+      z-index: 1;
+      right: 35%;
+      content: '';
+      top: 40%;
+      width: 317px;
+      height: 441px;
+      background: url('./img//b-banner-carousel__icon_type_bizserver.01681143119114e86e429e7d35ca528b.svg');
+    }
+  }
+  
+  .home__headlink::after {
+    display: none;
+  }
+  .home__headlink::before {
+    position: absolute;
+    left: 30%;
+
+    bottom: -4px;
+    content: '';
+    width: 260px;
+    height: 280px;
+    background-size: cover;
+  }
+
+  .home__headlink {
+    border: 18px solid #ffcc03;
+    padding: 8px 24px 0;
+    height: 446px;
+    color: #667695;
+    p {
+      font-size: 15px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    span {
+      font-size: 18px;
+      p {
+        color: #1d9ef9;
+        font-weight: 700;
+        line-height: 27px;
+        &:hover {
+          text-decoration: underline;
+          color: #2286ce;
+        }
       }
     }
   }

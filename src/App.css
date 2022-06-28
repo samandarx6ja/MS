@@ -298,8 +298,8 @@
   gap: 0.4rem;
   text-align: center;
   text-decoration: none;
-  margin-top: 0.5rem;
   margin: 6px;
+  margin-top: 0.5rem;
 }
 
 .home__item .home__banner {
@@ -366,6 +366,10 @@
   background: url(".//img/b-banner-xyz-logo.svg");
 }
 
+.home__slider {
+  display: none;
+}
+
 @media screen and (max-width: 1310px) {
   .home__item .banner1::after {
     display: none;
@@ -377,6 +381,12 @@
 
 @media screen and (max-width: 1024px) {
   .nav__flex {
+    display: none;
+  }
+  .home__slider {
+    display: block;
+  }
+  .home__bannerdispley {
     display: none;
   }
   .bar {
@@ -466,6 +476,89 @@
   }
   .navbar .nav__link .nav__icons {
     font-size: 45px;
+  }
+  .home__item {
+    text-decoration: none;
+    margin: 0;
+  }
+  .home__item .banner1::after {
+    display: block;
+  }
+  .home__item .banner2::after {
+    display: block;
+  }
+  .home__item .home__banner {
+    position: relative;
+    overflow: hidden;
+    height: 446px;
+    padding: 42px 72px;
+    background: #004ea7;
+    color: #fff;
+  }
+  .home__item .home__banner h1 {
+    white-space: nowrap;
+    display: block;
+    margin: auto;
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+  }
+  .home__item .home__banner p {
+    width: 100%;
+    white-space: wrap;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    z-index: 2;
+    letter-spacing: -1px;
+  }
+  .home__item .banner1::after {
+    position: absolute;
+    z-index: 1;
+    right: 35%;
+    content: '';
+    top: 40%;
+    width: 317px;
+    height: 441px;
+    background: url("./img//b-banner-carousel__icon_type_bizserver.01681143119114e86e429e7d35ca528b.svg");
+  }
+  .home__headlink::after {
+    display: none;
+  }
+  .home__headlink::before {
+    position: absolute;
+    left: 30%;
+    bottom: -4px;
+    content: '';
+    width: 260px;
+    height: 280px;
+    background-size: cover;
+  }
+  .home__headlink {
+    border: 18px solid #ffcc03;
+    padding: 8px 24px 0;
+    height: 446px;
+    color: #667695;
+  }
+  .home__headlink p {
+    font-size: 15px;
+    margin: 0 auto;
+  }
+  .home__headlink h1 {
+    font-size: 24px;
+  }
+  .home__headlink span {
+    font-size: 18px;
+  }
+  .home__headlink span p {
+    color: #1d9ef9;
+    font-weight: 700;
+    line-height: 27px;
+  }
+  .home__headlink span p:hover {
+    text-decoration: underline;
+    color: #2286ce;
   }
 }
 /*# sourceMappingURL=App.css.map */
