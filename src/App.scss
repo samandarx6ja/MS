@@ -82,13 +82,12 @@ $bg-blue: #066bc6;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .navmob__logo{
-      a{
-      display: none;
-
+    .navmob__logo {
+      a {
+        display: none;
       }
     }
-    
+
     a {
       padding: 16px 17px;
       color: #fff;
@@ -104,7 +103,7 @@ $bg-blue: #066bc6;
       cursor: pointer;
     }
   }
-  .sign__in{
+  .sign__in {
     display: none;
   }
 }
@@ -116,6 +115,7 @@ $bg-blue: #066bc6;
   background: #fff;
   height: 450px;
   min-width: 996px;
+  z-index: 10;
   .bar__icon {
     border-bottom: 5px solid #069cfa;
     box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.322);
@@ -130,7 +130,7 @@ $bg-blue: #066bc6;
           display: block;
         }
       }
-      &:focus{
+      &:focus {
         &:hover {
           .hidden {
             display: block;
@@ -138,7 +138,7 @@ $bg-blue: #066bc6;
         }
       }
     }
-    a{
+    a {
       display: block;
       padding: 15px 17px;
       font-size: 17px/44px;
@@ -192,16 +192,17 @@ $bg-blue: #066bc6;
     margin-top: 30px;
   }
 }
-.home__header{
+.home__header {
   position: relative;
+  margin: 6px;
 }
 
-.home__headlink{
+.home__headlink {
   border: 18px solid #ffcc03;
   padding: 42px 124px;
   color: #667695;
-  p{
-    max-width: 440px;
+  p {
+    max-width: 450px;
     margin: 6px auto;
     text-align: center;
     font-size: 18px;
@@ -209,37 +210,41 @@ $bg-blue: #066bc6;
     font-weight: 400;
     letter-spacing: normal;
   }
-  h1{
+  h1 {
     text-align: center;
     font-size: 48px;
     line-height: 60px;
     font-weight: 700;
-    letter-spacing: -.03em;
+    letter-spacing: -0.03em;
     color: #364364;
   }
-  span{
-    margin-bottom: 0;
+  span {
     font-size: 18px;
+    p{
+      color: #1d9ef9;
+      font-weight: 700;
     line-height: 27px;
-    font-weight: 700;
-    letter-spacing: normal;
-    color: #1d9ef9;
+    &:hover{
+    text-decoration: underline;
+    color: #2286ce;
+
+    }
+    }
   }
 }
-.home__headlink::before{
+.home__headlink::before {
   position: absolute;
   left: 43px;
   bottom: -4px;
   content: '';
   width: 260px;
-    height: 280px;
+  height: 280px;
   background-size: cover;
-  background: url('./img/b-banner-carousel__icon_type_actual-news-left.70c5c537cc42598af00e3fb74630dd01.svg') no-repeat;
-
+  background: url('./img/b-banner-carousel__icon_type_actual-news-left.70c5c537cc42598af00e3fb74630dd01.svg')
+    no-repeat;
 }
 
-
-.home__headlink::after{
+.home__headlink::after {
   position: absolute;
   right: 35px;
   bottom: 0;
@@ -247,8 +252,87 @@ $bg-blue: #066bc6;
   width: 260px;
   height: 280px;
   background-size: cover;
-  background: url('./img/b-banner-carousel__icon_type_actual-news-right.8598f59a307424466d2d4f616da3cc07.svg') no-repeat;
+  background: url('./img/b-banner-carousel__icon_type_actual-news-right.8598f59a307424466d2d4f616da3cc07.svg')
+    no-repeat;
+}
 
+.container__max {
+  max-width: 2000px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.home__item {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 0.4rem;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  margin: 6px;
+
+  .home__banner {
+  position: relative;
+  overflow: hidden;
+
+    padding: 42px 72px;
+    background: #004ea7;
+    color: #fff;
+
+    h1 {
+      white-space: nowrap;
+      display: block;
+      margin: auto;
+      font-size: 36px;
+      line-height: 48px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    p {
+      white-space: nowrap;
+      margin-top: 6px;
+      margin-bottom: 12px;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      z-index: 2;
+      letter-spacing: -1px;
+    
+    }
+    span {
+      color: #bce1fd;
+      p {
+        font-weight: 700;
+        font-size: 18px;
+        &:hover{
+          text-decoration: underline;
+          color: #3799df;
+      
+          }
+      }
+    }
+  }
+
+  .banner1::after{
+    position: absolute;
+    z-index: 1;
+    right: -5.5rem;
+    content: '';
+    top: -3rem;
+    width: 317px;
+    height: 441px;
+    background: url('./img//b-banner-carousel__icon_type_bizserver.01681143119114e86e429e7d35ca528b.svg');
+  }
+  .banner2::after{
+    position: absolute;
+    right: -5.5rem;
+    content: '';
+    top: -3rem;
+    width: 317px;
+    height: 441px;
+    background: url('.//img/b-banner-xyz-logo.svg');
+  }
 }
 
 
@@ -260,28 +344,31 @@ $bg-blue: #066bc6;
 
 
 
+@media screen and (max-width: 1310px){
+  .home__item{
+    .banner1::after{
+      display: none;
+    }
+    .banner2::after{
+      display: none;
+    }
+  }
+}
 
 
 
 
-
-
-
-
-
-
-@media screen and (max-width: 1024px){
-  .nav__flex{
+@media screen and (max-width: 1024px) {
+  .nav__flex {
     display: none;
   }
-  
- 
+
   .bar {
     position: absolute;
-    background:$bg-blue;
+    background: $bg-blue;
     height: 450px;
     .bar__icon {
-      border-bottom:none;
+      border-bottom: none;
       box-shadow: 1px 3px 7px rgba(0, 0, 0, 0.322);
       height: 100%;
       .hover__bar {
@@ -292,28 +379,26 @@ $bg-blue: #066bc6;
         .hidden {
           display: none;
         }
-        
-       
       }
-      a{
+      a {
         display: block;
         padding: 15px 24px;
         color: #fff;
-        font: 700 20px/24px Arial,Helvetica Neue,Helvetica,FreeSans,sans-serif;
+        font: 700 20px/24px Arial, Helvetica Neue, Helvetica, FreeSans,
+          sans-serif;
         text-decoration: none;
         white-space: nowrap;
         background-color: #066bc6;
         cursor: pointer;
         box-sizing: border-box;
         text-rendering: optimizeLegibility;
-        transition: .22s ease-in-out;
+        transition: 0.22s ease-in-out;
         &:hover {
           display: block;
           background: $blue-light;
         }
       }
     }
-    
   }
 
   .navbar {
@@ -321,7 +406,6 @@ $bg-blue: #066bc6;
 
     .nav__item {
       background: $bg-blue;
-
     }
     .nav__link {
       display: flex;
@@ -331,31 +415,30 @@ $bg-blue: #066bc6;
       a {
         display: none;
       }
-      .sign__in{
+      .sign__in {
         display: block;
         padding: 0 17px;
-        a{
-        display: block;
-        padding: 7px 20px;
+        a {
+          display: block;
+          padding: 7px 20px;
 
           background: $blue-light;
         }
       }
-      .navmob__logo{
+      .navmob__logo {
         padding: 12px 18px;
         display: flex;
         justify-content: center;
         align-items: center;
-        a{
+        a {
           padding: 5px 17px;
           display: inline-block;
         }
       }
-   
-      .nav__icons{
+
+      .nav__icons {
         font-size: 45px;
       }
     }
-   
   }
 }
