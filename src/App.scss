@@ -279,7 +279,6 @@ $bg-blue: #066bc6;
     color: #fff;
 
     h1 {
-      white-space: nowrap;
       display: block;
       margin: auto;
       font-size: 36px;
@@ -289,7 +288,6 @@ $bg-blue: #066bc6;
     }
 
     p {
-      white-space: nowrap;
       margin-top: 6px;
       margin-bottom: 12px;
       font-size: 18px;
@@ -336,43 +334,6 @@ $bg-blue: #066bc6;
   display: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 1310px) {
   .home__item {
     .banner1::after {
@@ -383,6 +344,8 @@ $bg-blue: #066bc6;
     }
   }
 }
+
+
 
 @media screen and (max-width: 1024px) {
   .nav__flex {
@@ -420,7 +383,6 @@ $bg-blue: #066bc6;
         font: 700 20px/24px Arial, Helvetica Neue, Helvetica, FreeSans,
           sans-serif;
         text-decoration: none;
-        white-space: nowrap;
         background-color: #066bc6;
         cursor: pointer;
         box-sizing: border-box;
@@ -478,6 +440,7 @@ $bg-blue: #066bc6;
   .home__item {
     text-decoration: none;
     margin: 0;
+    display: block;
     .banner1::after {
       display: block;
     }
@@ -489,23 +452,27 @@ $bg-blue: #066bc6;
       overflow: hidden;
       height: 446px;
 
-      padding: 42px 72px;
+      padding: 5px 10px;
       background: #004ea7;
       color: #fff;
-
+      .homebanner__title {
+        display: inline-block;
+        left: 0;
+        
+        color: red;
+        background: #000;
+      }
       h1 {
-        white-space: nowrap;
         display: block;
         margin: auto;
         font-size: 24px;
         line-height: 48px;
         font-weight: 700;
-        letter-spacing: -.01em;
+        letter-spacing: -0.01em;
       }
 
       p {
         width: 100%;
-        white-space: wrap;
         font-size: 15px;
         line-height: 27px;
         font-weight: 400;
@@ -516,15 +483,26 @@ $bg-blue: #066bc6;
     .banner1::after {
       position: absolute;
       z-index: 1;
-      right: 35%;
+      right: 50%;
+      transform: translate(50%,0);
       content: '';
       top: 40%;
       width: 317px;
       height: 441px;
       background: url('./img//b-banner-carousel__icon_type_bizserver.01681143119114e86e429e7d35ca528b.svg');
     }
+    .banner2::after {
+      position: absolute;
+      right: 50%;
+      transform: translate(50%,0);
+      content: '';
+      top: 30%;
+      width: 317px;
+      height: 441px;
+      background: url('.//img/b-banner-xyz-logo.svg') no-repeat;
+    }
   }
-  
+
   .home__headlink::after {
     display: none;
   }
@@ -563,5 +541,8 @@ $bg-blue: #066bc6;
         }
       }
     }
+  }
+  .home__header{
+    margin: 0;
   }
 }
