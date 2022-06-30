@@ -33,6 +33,10 @@
   margin: 0 auto;
 }
 
+.btn__primary {
+  background: #00c084;
+}
+
 .search__domain {
   display: inline-block;
   overflow: hidden;
@@ -47,10 +51,6 @@
   outline: none;
   font-size: 15px/24px;
   color: #afaeae;
-}
-
-.search__domain .btn__primary {
-  background: #00c084;
 }
 
 .search__domain .btn__grey {
@@ -305,6 +305,7 @@
 .home__item .home__banner {
   position: relative;
   overflow: hidden;
+  height: 234px;
   padding: 42px 72px;
   background: #004ea7;
   color: #fff;

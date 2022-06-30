@@ -35,6 +35,10 @@ $bg-blue: #066bc6;
   margin: 0 auto;
 }
 
+.btn__primary {
+  background: $green-light;
+}
+
 .search__domain {
   display: inline-block;
   overflow: hidden;
@@ -49,9 +53,7 @@ $bg-blue: #066bc6;
     font-size: 15px/24px;
     color: #afaeae;
   }
-  .btn__primary {
-    background: $green-light;
-  }
+ 
   .btn__grey {
     background: #94a0b6;
     margin-left: 6px;
@@ -273,7 +275,7 @@ $bg-blue: #066bc6;
   .home__banner {
     position: relative;
     overflow: hidden;
-
+    height: 234px;
     padding: 42px 72px;
     background: #004ea7;
     color: #fff;
@@ -333,6 +335,25 @@ $bg-blue: #066bc6;
 .home__slider {
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1310px) {
   .home__item {
