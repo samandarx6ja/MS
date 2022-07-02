@@ -22,6 +22,7 @@ $bg-blue: #066bc6;
     }
     .regis__link {
       display: flex;
+    
       justify-content: space-between;
       align-items: center;
       margin: 10px 0 24px 0;
@@ -31,7 +32,6 @@ $bg-blue: #066bc6;
       a {
         color: #1d9ef9;
         text-decoration: underline;
-        
       }
     }
   }
@@ -54,12 +54,41 @@ $bg-blue: #066bc6;
       &::placeholder{
       color: #94a0b691;
       }
-
-
     }
     button {
       position: absolute;
       right: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .regis__domain {
+    padding: 0 10px;
+    background-color: #f2f4f9;
+    height: 500px;
+    .regis__des {
+      padding: 30px 0;
+      h1{
+      color: #364364;
+      }
+      .regis__link {
+        display: block;
+      
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0 24px 0;
+        p{
+          color: #94a0b6;
+        }
+        a {
+          margin-top: 10px;
+          display: block;
+          color: #1d9ef9;
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
